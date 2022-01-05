@@ -20,7 +20,7 @@ const SignupForm = () => {
   // update state when form changes
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setformState({ ...formState, [name]: value });
+    setFormState({ ...formState, [name]: value });
   };
 
   // submit form
@@ -44,12 +44,6 @@ const SignupForm = () => {
       console.error(err);
       setShowAlert(true);
     }
-
-    // setformState({
-    //   username: '',
-    //   email: '',
-    //   password: '',
-    // });
   };
 
   return (
