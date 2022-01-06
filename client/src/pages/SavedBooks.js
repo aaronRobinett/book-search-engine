@@ -26,8 +26,8 @@ const SavedBooks = () => {
         throw new Error('something went wrong!');
       }
 
-      const updatedUser = await response.json();
-      setUserData(updatedUser);
+      //const updatedUser = await response.json();
+      //setUserData(updatedUser);
       // upon success, remove book's id from localStorage
       removeBookId(bookId);
     } catch (err) {
@@ -36,7 +36,7 @@ const SavedBooks = () => {
   };
 
   // if data isn't here yet, say so
-  if (!userDataLength) {
+  if (loading) {
     return <h2>LOADING...</h2>;
   }
 

@@ -9,7 +9,7 @@ import {
   ApolloProvider,
   createHttpLink,
 } from '@apollo/client';
-
+import { setContext } from '@apollo/client/link/context';
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
